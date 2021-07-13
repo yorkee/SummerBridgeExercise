@@ -1,0 +1,53 @@
+.riddle-grid {
+    min-height: 40vh;
+    background-color: #282c34;
+    color: white;
+     display: grid;
+     grid-template-columns: 60% 20% 10%;     
+     padding:2em
+ } 
+
+ .answer-grid {
+    min-height: 40vh;
+    background-color: #282c34;
+    display: flex;
+    justify-content: column;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    padding:1em 4em;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.answer {
+    font-size: 1.5em;
+    flex-wrap: wrap;    
+    color:red
+}
+
+.correct {
+    color:red
+}
+
+ .riddle-grid div {
+     padding:1em;
+ }
+ .riddle-grid input {
+     margin: 1em;
+ }
+
+ .imgBlock {
+    background-color: #282c34;
+     min-height: 60vh;
+     margin: 0 auto;
+     text-align:center;
+ }
+
+ .imgBlock  img{
+    width: auto;
+    
+    height: 60vh;
+ }
+  
