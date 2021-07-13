@@ -77,4 +77,3 @@ Currently it is hosting 19 different JPG file in public/assets.  Replace them wi
 
 
 
-
