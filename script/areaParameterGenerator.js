@@ -1,8 +1,8 @@
 'use strict'
 
-class DivisionGenerator {
+class AreaParameterGenerator {
 
-    generateDivision(persona){
+    generateQuestion(persona){
 
         if (Math.random() > 0.5){
     
@@ -28,4 +28,4 @@ class DivisionGenerator {
 }
 
 
-module.exports =  DivisionGenerator;
+module.exports =  AreaParameterGenerator;

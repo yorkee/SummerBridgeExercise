@@ -2,7 +2,7 @@
 
 class DivisionGenerator {
 
-    generateDivision(persona){
+    generateQuestion(persona){
 
         if (Math.random() > 0.5){
     
@@ -12,7 +12,7 @@ class DivisionGenerator {
             let a = Math.round(q *100 / i)/100;
     
             return {
-                q: `${persona || ""} What is ${q} divide by ${i}?`,
+                q: `${persona || ""} What is ${q} divide by ${i}? (round to 2 digit if necessary)`,
                 a: a
             }
         } else {
@@ -21,7 +21,7 @@ class DivisionGenerator {
             let q = i*a;
     
             return {
-                q: `${persona || ""} What is ${q} divide by ${i}?`,
+                q: `${persona || ""} What is ${q} divide by ${i}? (round to 2 digit if necessary)`,
                 a: a
             }        
         }

@@ -2,7 +2,7 @@
 
 class Grade2Generator {
 
-    generateGrade2Question(persona){
+    generateQuestion(persona){
 
         let random = Math.random();
         if (random > 0.3){

@@ -16,14 +16,9 @@ class Question extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e, index) {
-
-        
+    handleChange(e, index) {        
         let answer = this.state.answer;
-
-
         answer[index] = e.target.value;
-        console.log("haha", answer);
         this.setState({
             answer: answer
         });
@@ -33,10 +28,8 @@ class Question extends Component {
 
         let inCorrect = [], anyIncorrect = false;
         for (let i = 0; i < this.props.session.questions.length; i++){
-            let isIncorrect = parseFloat(this.state.answer[i]) !== this.props.session.questions[i].a;
-            
+            let isIncorrect = parseFloat(this.state.answer[i]) !== this.props.session.questions[i].a;        
             inCorrect[i] = isIncorrect;
-            console.log("what is incorrect? ", inCorrect);
             if (isIncorrect){
                 anyIncorrect = true;
             }
@@ -60,7 +53,7 @@ class Question extends Component {
                     inCorrect:[],
                     isPicture: false
                 });
-            }, 10000);
+            }, 13000);
         }
     }
 

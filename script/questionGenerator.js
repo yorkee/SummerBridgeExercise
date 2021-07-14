@@ -1,13 +1,20 @@
 const RewardGenerator = require("./rewardGenerator");
-const DivisionGenerator = require("./divisionGenerator");
-//const Grade2Generator = require("./grade2Generator");
 const rewardGenerator = new RewardGenerator();
+const DivisionGenerator = require("./divisionGenerator");
 const divisionGenerator = new DivisionGenerator();
-//const grade2Generator = Grade2Generator();
+const DecimalAddSubtractGenerator = require("./decimalAddSubtractGenerator");
+const decimalAddSubtractGenerator = new DecimalAddSubtractGenerator();
+
+// you can enable those question generator, and plug it in line 37 / 39.  or change the logic so they will display randomly
+// const AreaParameterGenerator = require("./areaParameterGenerator");
+// const areaParameterGenerator = new AreaParameterGenerator();
+// const DecimalMultiplicationGenerator = require("./decimalMultiplicationGenerator");
+// const decimalMultiplicationGenerator = new DecimalMultiplicationGenerator();
+// const Grade2Generator = require("./grade2Generator");
+// const grade2Generator = new Grade2Generator();
+
+
 fs = require('fs');
-
-
-
 
 (()=>{
     var args = process.argv.slice(2);
@@ -25,7 +32,12 @@ fs = require('fs');
     for (j = 0; j < sessionsCount; j++){
         let questions = [];
         for (i = 0; i < questionCount; i++){
-            questions[i] = divisionGenerator.generateDivision("Sweety");
+
+            if (Math.random() <0.5){
+                questions[i] = divisionGenerator.generateQuestion("Sweety");
+            } else {
+                questions[i] = decimalAddSubtractGenerator.generateQuestion("Sweety");
+            }
         }
         sessions[j] = {
             questions: questions,
@@ -35,17 +47,13 @@ fs = require('fs');
 
     data.sessions = sessions;
 
-    
     fs.writeFile("./src/data/data.json", JSON.stringify(data), "utf8", (err) => {
         if (err){
             console.log(" err: ", err);    
         } else {
             console.log(" done.");
         }
-        
-    })
-
-
+    });
 })();
 
 
