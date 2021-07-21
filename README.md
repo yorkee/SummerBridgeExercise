@@ -1,8 +1,7 @@
 # Summer Bridge Exercise
 
-[Summer exercise](https://github.com/yorkee/SummerBridgeExercise/blob/master/public/assets/20.jpg)
-
 My kids finished their bridge book so fast that they are lacking of academic exercise to do for the rest of summer.  After a year of pandemic, they kind of get used to IXL alike computer exercise.  I decided to do my own custom version since they no longer able to access any of the school year online exercise.
+![Summer exercise](https://github.com/yorkee/SummerBridgeExercise/blob/master/public/assets/20.jpg)
 
 
 ## Features
